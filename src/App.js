@@ -20,7 +20,7 @@ const PrivateRoute = ({ isAuthenticated, ...props }) => {
     <>
       <Header />
       <Outlet />
-    </> : <Navigate replace to='/account' />
+    </> : <Navigate replace to='https://content-hub.onrender.com/account' />
 };
 
 function App() {
@@ -32,10 +32,10 @@ function App() {
       <BrowserRouter>
         <Box style={{ marginTop: 64 }}>
           <Routes>
-            <Route path='/account' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
+            <Route path='https://content-hub.onrender.com/account' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
             
-            <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
-              <Route path='/' element={<Home />} />
+            <Route path='https://content-hub.onrender.com/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
+              <Route path='https://content-hub.onrender.com/' element={<Home />} />
             </Route>
 
             <Route path='/create' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
