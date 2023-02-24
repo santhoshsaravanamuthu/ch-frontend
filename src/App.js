@@ -32,9 +32,9 @@ function App() {
       <BrowserRouter>
         <Box style={{ marginTop: 64 }}>
           <Routes>
-            <Route path='https://ch-backend.onrender.com/account' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
+            <Route path='/account' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
             
-            <Route path='https://ch-backend.onrender.com/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
+            <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
               <Route path='https://ch-backend.onrender.com/' element={<Home />} />
             </Route>
 
