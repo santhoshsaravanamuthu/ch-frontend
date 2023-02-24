@@ -20,7 +20,7 @@ const PrivateRoute = ({ isAuthenticated, ...props }) => {
     <>
       <Header />
       <Outlet />
-    </> : <Navigate replace to='https://ch-backend.onrender.com/account' />
+    </> : <Navigate replace to='/account' />
 };
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
             <Route path='/account' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
             
             <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
-              <Route path='https://ch-backend.onrender.com/' element={<Home />} />
+              <Route path='/' element={<Home />} />
             </Route>
 
             <Route path='/create' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
