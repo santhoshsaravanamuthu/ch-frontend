@@ -34,7 +34,7 @@ const Wrapper = styled(Box)`
 
 const LoginButton = styled(Button)`
     text-transform: none;
-    background: #2c2c54;
+    background: #0D263B;
     color: #fff;
     height: 48px;
     border-radius: 2px;
