@@ -103,8 +103,8 @@ const Login = ({ isUserAuthenticated }) => {
     const loginUser = async () => {
         let response = await API.userLogin(login);
         if (response.isSuccess) {
+            alert("Login Successfull !");
             showError('');
-
             sessionStorage.setItem('accessToken', `Bearer ${response.data.accessToken}`);
             sessionStorage.setItem('refreshToken', `Bearer ${response.data.refreshToken}`);
             setAccount({ name: response.data.name, username: response.data.username });
@@ -120,6 +120,7 @@ const Login = ({ isUserAuthenticated }) => {
     const signupUser = async () => {
         let response = await API.userSignup(signup);
         if (response.isSuccess) {
+            alert("SignUp Successfull !");
             showError('');
             setSignup(signupInitialValues);
             toggleAccount('login');
