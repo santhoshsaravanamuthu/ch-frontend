@@ -30,6 +30,7 @@ const InputTextField = styled(InputBase)`
     flex: 1;
     margin: 0 30px;
     font-size: 25px;
+    background : white;
 `;
 
 const Textarea = styled(TextareaAutosize)`
@@ -92,7 +93,7 @@ const CreatePost = () => {
 
             <StyledFormControl>
                 <label htmlFor="fileInput">
-                    <Add fontSize="large" color="action" />
+                    <Add fontSize="large" color="white" />
                 </label>
                 <input
                     type="file"

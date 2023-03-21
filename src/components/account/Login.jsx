@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+alert("Login Successfull !");import React, { useState, useEffect, useContext } from 'react';
 
 import { TextField, Box, Button, Typography, styled } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
@@ -113,6 +113,7 @@ const Login = ({ isUserAuthenticated }) => {
             setLogin(loginInitialValues);
             navigate('/');
         } else {
+            alert("Login Failed !");
             showError('Something went wrong! please try again later');
         }
     }
@@ -125,6 +126,7 @@ const Login = ({ isUserAuthenticated }) => {
             setSignup(signupInitialValues);
             toggleAccount('login');
         } else {
+            alert("SignUp Failed !");
             showError('Something went wrong! please try again later');
         }
     }
